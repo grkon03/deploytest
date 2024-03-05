@@ -15,6 +15,7 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           port: ${{ secrets.SSH_PORT }}
           script: |
+            ls -a
             cd /var/git/deploytest/
             git pull
             cp -r /var/git/deploytest/build/* /var/www/deploytest
