@@ -22,4 +22,4 @@ jobs:
             echo $?
             git merge origin/main
             echo $?
-            cp -r /var/git/deploytest/build/* /var/www/deploytest
+            #cp -r /var/git/deploytest/build/* /var/www/deploytest
