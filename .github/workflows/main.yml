@@ -17,6 +17,5 @@ jobs:
           script: |
             cd /var/git/deploytest/
             git pull
+            echo $?
             cp -r /var/git/deploytest/build/* /var/www/deploytest
-          env: 
-            ACTIONS_RUNNER_DEBUG: true
