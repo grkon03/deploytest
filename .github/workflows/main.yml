@@ -16,6 +16,10 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           script: |
             cd /var/git/deploytest/
-            git pull
+            git checkout main
+            echo $?
+            git fetch
+            echo $?
+            git merge origin/main
             echo $?
             cp -r /var/git/deploytest/build/* /var/www/deploytest
