@@ -15,8 +15,6 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           port: ${{ secrets.SSH_PORT }}
           script: |
-            eval `ssh-agent`
-            eval `ssh-add ${{ secrets.SSH_GITHUBKEY_PATH }}`
             cd /var/git/deploytest/
             git pull
             cp -r /var/git/deploytest/build/* /var/www/deploytest
